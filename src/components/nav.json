@@ -2,9 +2,9 @@
     "NavMain":[
         {
             "tag":"img",
-            "class":"",
+            "class":"w-8 h-8 object-contain",
             "params":{
-                "src":"",
+                "src":"public/Azeem.png",
                 "alt":"img"
             }  
         },
@@ -48,9 +48,10 @@
     "NavButton":[
         {
             "tag":"button",
-            "class":"bg-gradient-to-r from-green-400 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-100 px-4 py-2 rounded-full",
+            "class":"cursor-pointer bg-gradient-to-r from-green-400 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-100 px-4 py-2 rounded-full",
             "name":"Download Resume",
-            "params":{}  
+            "params":{},
+            "onClick":"download"
         }
     ]
 }
