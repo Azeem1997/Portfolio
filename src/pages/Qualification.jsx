@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Grid } from '@mui/material';
 import CollapsableCard from '../components/collapsable';
 import ContentChart from '../components/chart';
+import CountdownTimer from '../components/Timer';
 
 export default function Qualification() {
     return (
@@ -36,7 +37,7 @@ export default function Qualification() {
                             }
                         `}</style>
                     </p>
-
+                    <CountdownTimer />
                 </div>
             </div>
         </div>

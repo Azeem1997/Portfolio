@@ -18,7 +18,7 @@ function App() {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.4, // delay between children
+      staggerChildren: 0.1, // delay between children
     },
   },
 };
@@ -28,7 +28,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.4, ease: "circOut" },
   },
 };
 
