@@ -5,9 +5,9 @@ import Home from './pages/Home'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import About from './pages/About'
-import Contact from './pages/Contact'
 import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
+import Projects from './pages/Projects';
 
 function App() {
 
@@ -15,6 +15,8 @@ function App() {
       <div className="">
       <Navbar/>
       <Home />
+      <About />
+      <Projects />
       <ToastContainer/>
       </div>
   )
