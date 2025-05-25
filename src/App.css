@@ -14,3 +14,7 @@
   max-height: 0;
   opacity: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}

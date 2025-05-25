@@ -8,6 +8,7 @@ import About from './pages/About'
 import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Projects from './pages/Projects';
+import Qualification from './pages/Qualification';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Home />
       <About />
       <Projects />
+      <Qualification />
       <ToastContainer/>
       </div>
   )
