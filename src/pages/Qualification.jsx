@@ -1,22 +1,33 @@
-// src/pages/Home.jsx
 import { motion } from 'framer-motion';
-import { utils } from '../components/utils';
-import DialogueBox from '../components/dialogue';
-import { useState } from 'react';
-import { Grid } from '@mui/material';
-import CollapsableCard from '../components/collapsable';
-import ContentChart from '../components/chart';
-import CountdownTimer from '../components/Timer';
 
-export default function Qualification() {
+const qualifications = [
+    {
+        title: 'B.E Mechanical Engineering',
+        institution: 'SNS College of Technology',
+        year: '2015 - 2019',
+        Percent: '83%'
+    },
+    {
+        title: 'HSC',
+        institution: 'Sri Vijay Vidyalaya, Hosur',
+        year: '2013-2015',
+        Percent: '89%'
+    },
+    {
+        title: 'SSLC',
+        institution: 'Sri Vijay Vidyalaya, Hosur',
+        year: '2024',
+        Percent: '97%'
+    },
+];
+
+export default function Qualifications() {
     return (
-        <div className='bg-black text-white py-16 grid grid-cols-1 gap-8 -mt-12' id="qualification">
-            {/* <h1 className="text-3xl font-bold bg-black text-center grid grid-cols-1 -mb-8"><span className='text-transparent bg-clip-text bg-gradient-to-l from-white-400 to-gray-100'>About Me</span></h1> */}
-            <div className="bg-gray-800 text-white py-16 grid grid-cols-1 gap-8 -mt-12 mr-9 ml-12 rounded-xl p-6">
-                <h1 className='text-2xl font-bold grid grid-cols-1'>Qualification</h1>
-                <div className='bg-gray text-white grid grid-rows-1 gap-4'>
-                    <p>
-                        Development In-progress
+        <div className='bg-black'>
+        <div className='dark:bg-gray-900 shadow-xl rounded-xl ml-10 mr-8 p-6  border border-gray-200 dark:border-gray-700 transition-transform'>
+            <h1 className='text-white text-2xl font-bold grid grid-cols-1 pl-9'>Educational Qualification</h1>
+            <p className='ml-9 text-white'>
+                    Development In-progress
                         {[...Array(4)].map((_, i) => (
                             <span
                                 key={i}
@@ -37,10 +48,22 @@ export default function Qualification() {
                             }
                         `}</style>
                     </p>
-                    <CountdownTimer />
-                </div>
+            <div className="grid md:grid-cols-3 gap-6 p-8" id="qualification">
+                {qualifications.map((qual, idx) => (
+                    <motion.div
+                        key={idx}
+                        //   whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.2 }}
+                        className="bg-black shadow-xl rounded-xl p-6 border border-gray-200 dark:border-gray-700 transition-transform"
+                    >
+                        <div className="text-white text-4xl mb-3">{qual.Percent}</div>
+                        <h3 className="text-xl font-semibold">{qual.title}</h3>
+                        <p className="text-sm text-gray-500">{qual.institution}</p>
+                        <p className="text-xs text-gray-400">{qual.year}</p>
+                    </motion.div>
+                ))}
             </div>
         </div>
-
+        </div>
     );
 }

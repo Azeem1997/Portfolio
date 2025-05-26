@@ -8,6 +8,7 @@ import About from './pages/About'
 import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Projects from './pages/Projects';
+import Hobbies from './pages/Hobbies';
 import Qualification from './pages/Qualification';
 import { motion, MotionConfig } from 'framer-motion';
 
@@ -45,6 +46,7 @@ const itemVariants = {
       <motion.div variants={itemVariants}><Projects /></motion.div>
       <motion.div variants={itemVariants}><Qualification /></motion.div>
       <motion.div variants={itemVariants}><ToastContainer /></motion.div>
+      {/* <motion.div variants={itemVariants}><Hobbies /></motion.div> */}
     </motion.div>
   )
 }

@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <div className="bg-black text-white px-8 md:px-16 lg:px-24 fixed top-0 left-0 w-full z-50">
       <div className="container flex py-2 justify-center md:justify-between items-center">
-        <div className='grid grid-cols-1 mt-4'>
+        <div className='grid grid-cols-1 mt-1'>
         {navObj && navObj.NavMain && navObj.NavMain.map((item, idx) => {
             return <item.tag {...item.params} key={idx} className={item.class}>{item.name}</item.tag>
           })
